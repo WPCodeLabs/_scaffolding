@@ -1,0 +1,76 @@
+.alignnone {
+    margin: 0;
+}
+.alignleft {
+    float: left;
+    margin: 0 $spacing $spacing 0;
+}
+
+.alignright {
+    float: right;
+    margin: 0 0 $spacing $spacing;
+}
+
+.aligncenter {
+	margin: 0 auto $spacing;
+}
+.alignnone {
+	margin-bottom: $spacing;
+}
+
+img.aligncenter {
+	display: block;
+}
+
+a img {
+	display: block;
+}
+.post-thumbnail {
+	margin-bottom: $spacing;
+}
+.wp-caption {
+	width: auto !important;
+}
+.wp-caption-text,
+.fl-photo-caption {
+	font-size: .9rem;
+	color: $light-font-color;
+	text-align: center;
+	font-style: italic;
+	padding: 5px 0 0;
+	line-height: 1.25;
+	overflow: visible;
+	white-space: inherit;
+}
+.wp-video {
+	margin-bottom: $spacing;
+}
+.flex-video {
+    height: 0;
+    padding-bottom: 67.5%;
+    margin-bottom: 1.618rem;
+    position: relative;
+    overflow: hidden;
+    &.widescreen {
+        padding-bottom: 56.25%;
+    }
+    &.vimeo {
+        padding-top: 0;
+    }
+    embed, iframe, object, video {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+}
+.gallery {
+	@include flexbox();
+	flex-wrap: wrap;
+	margin: 0 auto $spacing;
+	.gallery-item {
+		padding: $gutter;
+		margin-bottom: $gutter;
+	}
+}

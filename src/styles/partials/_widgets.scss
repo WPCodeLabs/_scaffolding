@@ -1,0 +1,128 @@
+/*
+ * JETPACK SHARING
+ */
+.sharedaddy {
+	.sd-title {
+		@include invisible();
+	}
+	.sd-content, .sd-social-icon-text .sd-content {
+		ul {
+			@include flexbox( 'row' );
+			li {
+				margin: 0;
+				flex: 1;
+				&.share-end {
+					display: none;
+				}
+				a.sd-button {
+					display: block;
+					width: 100%;
+					text-align: center;
+					border-radius: 0 !important;
+					border: none !important;
+					box-shadow: none !important;
+					padding: .809em;
+					font-family: $sans-serif;
+					font-size: .9rem;
+					span {
+						display: none;
+					}
+				}
+				&.share-facebook {
+					a.sd-button {
+						background-color: $facebook-color;
+						color: #fff !important;
+						&:hover, &:focus {
+							background-color: darken( $facebook-color, 5% );
+							color: #fff !important;
+						}
+					}
+				}
+				&.share-twitter {
+					a.sd-button {
+						background-color: $twitter-color;
+						color: #fff !important;
+						&:hover, &:focus {
+							background-color: darken( $twitter-color, 5% );
+							color: #fff !important;
+						}
+					}
+				}
+				&.share-pinterest {
+					a.sd-button {
+						background-color: $pinterest-color;
+						color: #fff !important;
+						&:hover, &:focus {
+							background-color: darken( $pinterest-color, 5% );
+							color: #fff !important;
+						}
+					}
+				}
+				&.share-linkedin {
+					a.sd-button {
+						background-color: $linkedin-color;
+						color: #fff !important;
+						&:hover, &:focus {
+							background-color: darken( $linkedin-color, 5% );
+							color: #fff !important;
+						}
+					}
+				}
+				&.share-reddit {
+					a.sd-button {
+						background-color: $reddit-color;
+						color: #fff !important;
+						&:hover, &:focus {
+							background-color: darken( $reddit-color, 5% );
+							color: #fff !important;
+						}
+					}
+				}
+				&.share-tumblr {
+					a.sd-button {
+						background-color: $tumblr-color;
+						color: #fff !important;
+						&:hover, &:focus {
+							background-color: darken( $tumblr-color, 5% );
+							color: #fff !important;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+/* calendar widget */
+#wp-calendar {width: 100%; }
+#wp-calendar caption { text-align: right; color: #333; font-size: 12px; margin-top: 10px; margin-bottom: 15px; }
+#wp-calendar thead { font-size: 10px; }
+#wp-calendar thead th { padding-bottom: 10px; text-align: center;}
+#wp-calendar tbody { color: #aaa; }
+#wp-calendar tbody td { background: #f5f5f5; border: 1px solid #fff; text-align: center; padding:8px;}
+#wp-calendar tbody td:hover { background: #fff; }
+#wp-calendar tbody .pad { background: none; }
+#wp-calendar tfoot #next { font-size: 10px; text-transform: uppercase; text-align: right; }
+#wp-calendar tfoot #prev { font-size: 10px; text-transform: uppercase; padding-top: 10px; }
+.widget_calendar tfoot td {
+	border: 0;
+}
+.widget {
+	word-break: break-word;
+	ul:last-child {
+		margin-bottom: 0;
+	}
+}
+
+/**
+ * Masonry Widgets at certain breakpoints
+ */
+#secondary {
+	&.masonry {
+		margin-left: 0 - $gutter;
+		margin-right: 0 -$gutter;
+		.widget {
+			width: 50%;
+			padding: 0 $gutter;
+		}
+	}
+}

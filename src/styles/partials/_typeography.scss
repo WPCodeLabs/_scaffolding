@@ -1,0 +1,137 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+	font-family: $headline;
+	font-weight: 700;
+	line-height: 1;
+	margin: 0 0 $spacing;
+	// clear: both;
+	word-break: break-word;
+}
+
+// .fl-heading-text {
+// 	display: block;
+// 	margin: 0 0 $spacing;
+// }
+//
+.fl-module-heading .fl-module-content {
+	margin-bottom: $spacing;
+}
+
+h1, .h1 {
+	font-size: 1.8rem;
+}
+
+h2, .h2 {
+	font-size: 1.6rem;
+}
+
+h3, .h3 {
+	font-size: 1.5rem;
+}
+
+h4, .h4 {
+	font-size: 1.25rem;
+}
+
+h5, .h5 {
+	font-size: 1.15rem;
+}
+
+h6, .h6 {
+	font-size: 1rem;
+}
+
+@include breakpoint( 'tablet' ) {
+	#main {
+		font-size: 1.25rem;
+	}
+	h1, .h1 {
+	    font-size: 2.8rem;
+	}
+	h2, .h2 {
+	    font-size: 2.25rem;
+	}
+	h3, .h3 {
+	    font-size: 2rem;
+	}
+	h4, .h4 {
+	    font-size: 1.75rem;
+	}
+	h5, .h5 {
+	    font-size: 1.5rem;
+	}
+}
+
+@include breakpoint( 'desktop-hd' ) {
+	#main {
+		font-size: 1.5rem;
+	}
+}
+
+.lead {
+    font-size: 1.25em;
+}
+.jumbo {
+    font-size: 10em;
+}
+
+p,
+address {
+	margin-bottom: $spacing;
+	&:last-child {
+		// margin-bottom:0;
+	}
+	&:empty {
+		display: none;
+	}
+}
+
+hr {
+	border: 0;
+	border-collapse: collapse;
+	border-top: 1px solid $border-color;
+	clear: both;
+	margin: $spacing 0;
+}
+
+blockquote {
+	font-size: 1.25em;
+	font-style: italic;
+	font-family: $serif;
+	font-weight: 400;
+	margin-bottom: $spacing;
+	cite {
+		display: block;
+		clear: both;
+		text-align: right;
+		font-weight: 600;
+	}
+}
+
+code {
+	background: $border-color;
+	padding: 0 10px;
+}
+
+pre {
+	padding: 10px;
+	background: $border-color;
+	code {
+		padding: 0;
+	}
+}
+.entry-title,
+.widget,
+p {
+	word-break: break-word;
+}

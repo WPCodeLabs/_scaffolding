@@ -1,0 +1,141 @@
+html {
+	position: relative;
+}
+
+body {
+    font-family: $sans-serif;
+    font-weight: 300;
+    line-height: $line-height;
+    -webkit-font-smoothing: antialiased;
+    color: $font-color;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background: #eee;
+    position: relative;
+}
+
+#page {
+	max-width: 1920px;
+	margin: 0 auto;
+	background: #fff;
+}
+
+#wpadminbar {
+	position: fixed !important;
+}
+
+.container {
+	max-width: 1440px;
+	margin: 0 auto;
+	@include breakpoint( 'desktop-hd' ) {
+		max-width: 100%;
+	}
+}
+
+#primary {
+	margin: 0 auto;
+	padding: $spacing;
+	@include clearfix();
+	/**
+	 * Above tablet breakpoint
+	 */
+	@include breakpoint( 'tablet-wide' ) {
+		.flexbox & {
+			.container {
+				display: flex;
+				flex-direction: row;
+			}
+		}
+	}
+}
+
+@include breakpoint( 'tablet-wide' ) {
+	#main {
+		width: calc( 100% - 360px );
+		padding-right: $spacing;
+		border-right: 1px solid #eee;
+	}
+	#secondary {
+		width: 360px;
+		padding-left: $spacing;
+	}
+	#main,
+	#secondary {
+		float: left;
+	}
+}
+@include breakpoint( 'desktop-wide' ) {
+	#main {
+		width: calc( 100% - 460px );
+		padding-right: $spacing;
+		border-right: 1px solid #eee;
+	}
+	#secondary {
+		width: 460px;
+		padding-left: $spacing;
+	}
+	#main,
+	#secondary {
+		float: left;
+	}
+}
+/**
+ * Full width template
+ */
+body.full-width-content {
+	#primary {
+		> .container {
+			display: block;
+		}
+	}
+	#main {
+		width: 100%;
+		padding: 0;
+		border: none;
+		float: none;
+	}
+}
+body.full-width-stretched {
+	#primary {
+		padding: 0;
+		> .container {
+			display: block;
+			max-width: none;
+		}
+	}
+	#main {
+		width: 100%;
+		padding: 0;
+		border: none;
+		float: none;
+	}
+	.entry {
+		padding: 0;
+	}
+}
+
+
+
+.entry,
+#comments .comments-header,
+#comments .comment-list,
+#comments .comment-respond,
+#secondary .widget {
+	background: #fff;
+	// padding: $spacing;
+}
+
+#comments {
+	margin-top: $spacing;
+}
+
+#secondary {
+	margin-top: $spacing;
+	.widget {
+		margin-bottom: $spacing;
+	}
+	@include breakpoint( 'tablet' ) {
+		margin-top: 0;
+	}
+}

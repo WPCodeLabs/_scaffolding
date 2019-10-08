@@ -1,0 +1,142 @@
+@import 'include/variables';
+@import 'include/mixins';
+@import 'include/equalize';
+@import 'include/toolbox';
+@import 'include/grid';
+@import 'partials/layout';
+@import 'partials/masthead';
+@import 'partials/colophon';
+@import 'partials/navigation';
+@import 'partials/buttons';
+@import 'partials/links';
+@import 'partials/typeography';
+@import 'partials/icons';
+@import 'partials/forms';
+@import 'partials/tables';
+@import 'partials/lists';
+@import 'partials/embeds';
+@import 'partials/slick';
+@import 'partials/slick-theme';
+@import 'partials/archive';
+@import 'partials/widgets';
+@import 'partials/comments';
+
+.woocommerce,
+.woocommerce-page {
+	/**
+	 * Checkout page
+	 */
+	form.woocommerce-checkout {
+		#customer_details {
+			float: left;
+			width: 50%;
+			padding: 0 $gutter;
+			.col-1,
+			.col-2 {
+				padding: 0;
+				float: none;
+				width: 100%;
+			}
+		}
+		#order_review_heading,
+		#order_review {
+			float: left;
+			width: 50%;
+			padding: 0 $gutter;
+		}
+	}
+}
+/**
+ * Jetpack
+ */
+.infinite-scroll {
+	.posts-navigation {
+		display: none;
+	}
+}
+body {
+	&.date-hidden {
+		.posted-on {
+			@include invisible();
+		}
+	}
+	&.categories-hidden {
+		.entry-categories {
+			@include invisible();
+		}
+	}
+	&.tags-hidden {
+		.entry-tags {
+			@include invisible();
+		}
+	}
+	&.author-hidden {
+		.byline {
+			@include invisible();
+		}
+	}
+	&.comment-hidden {
+		.comments-link {
+			@include invisible();
+		}
+	}
+}
+// Jetpack author box
+.entry-author {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	margin-top: $spacing;
+	.author-avatar {
+		float: left;
+		margin-right: $spacing;
+		img {
+			border-radius: 100%;
+		}
+	}
+	.author-title {
+		margin: 0;
+		line-height: 1;
+		font-size: 1.25rem;
+	}
+	.author-bio {
+		width: 100%;
+		display: block;
+		margin-top: $spacing;
+		padding-left: 48px + $spacing;
+		font-size: 1rem;
+	}
+}
+// Theme author box
+.author-box {
+	margin-top: $spacing;
+	.author-header {
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		.author-avatar,
+		.author-info {
+			float: left;
+		}
+		.author-avatar {
+			margin-right: $spacing;
+			img {
+				border-radius: 100%;
+			}
+		}
+		.author-title {
+			font-size: 1.25rem;
+			margin: 0;
+			font-size: 1.25rem;
+			line-height: 1;
+		}
+	}
+	.author-content {
+		width: 100%;
+		display: block;
+		margin-top: $spacing;
+		padding-left: 48px + $spacing;
+		font-size: 1rem;
+	}
+}

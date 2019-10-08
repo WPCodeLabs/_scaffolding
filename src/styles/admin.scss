@@ -1,0 +1,12 @@
+@import 'include/variables';
+@import 'include/mixins';
+
+ul.gsp_range_label {
+	@include flexbox('row');
+	margin: -7px -10% 0;
+	li {
+		flex: 1;
+		width: 20%;
+		text-align: center;
+	}
+}
